@@ -1,12 +1,15 @@
+/* Global Styles */
+
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+    font-size: 62.5%; /* Set base font size to 10px */
+    box-sizing: border-box; /* Use border-box box model */
 }
 
 body {
-    font-family: 'Raleway';
+    font-family: 'Raleway'; /* Set the font family for the body */
 }
 
+/* Removes padding */
 *{
     margin: 0;
     padding: 0;
@@ -22,16 +25,21 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* Put a background image on the header and hero */
 .image {
     background-image: url(../Images/Background.png);
     background-position: 69% center;
 }
 
+/* set a wrapper */
 .wrapper {
    max-width: 350px;
    margin: 0 auto; 
    width: 100%;
 }
+
+/* Header Styles */
 
 .nav__menu {
     list-style: none;
@@ -54,7 +62,7 @@ a {
     transition: all .6s ease-in-out;
 }
 
-
+/* Scroll down Header styles */
 .nav__bar.scroll-down {
     filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
     position: fixed;
@@ -94,12 +102,15 @@ a {
     background-color: white;
 }
 
+/* Hero section styles */
+
 .hero {
     background-color: rgba(255, 255, 255, .55);
     padding: 4rem 0 12rem 0;
     /* padding-top: 8.2rem; */
 }
 
+/* Scroll down Hero styles */
 .hero.scroll-down {
     padding-top: 12.2rem;
 }
@@ -135,13 +146,17 @@ a {
     margin: 0;
 }
 
+/* Padding for the section */
 section {
     padding: 4rem 0 0 0;
-  }
+}
 
+/* Defining a border */
 .border {
     border-bottom: 1px solid black;
 }
+
+/* Styles for Each Heading */
 
 h2 {
     font-family: 'Playfair Display';
@@ -159,6 +174,7 @@ h4 {
     padding-bottom: 1rem;
 }
 
+/* Styles for paragraph */
 p {
     font-size: 1.6rem;
     font-weight: 400;
@@ -183,6 +199,8 @@ h5 {
     font-weight: 400;
     text-align: center;
 }
+
+/* Quantum States  Styles */
 
 .state_list {
     list-style: none;
@@ -214,6 +232,8 @@ h5 {
     display: none;
 }
 
+
+/* Carousel Styles */
 
 .carousel {
     width: 27.8rem;
@@ -309,6 +329,7 @@ h5 {
     margin-bottom: 5rem;
 }
 
+/* Styles for next page */
 .next {
     font-size: 1.6rem;
     font-weight: 500;
@@ -317,6 +338,8 @@ h5 {
     margin-top: 1.5rem;
     margin-bottom: 2.1rem;
 }
+
+/* Footer Styles */
 
 footer {
     background-color: #FFF9F1;
@@ -342,6 +365,18 @@ footer {
     padding-bottom: 1.2rem;
 }
 
+/* Media Queries */
+
+/* 
+    Each media query targets a specific viewport width, and the CSS rules inside 
+    each media query will only apply when the viewport is at least that wide.
+*/
+
+/* 
+    The media queries are for the mobile layout first. It's mainly adjusting the wrapper sizes
+*/
+
+/* At viewport widths of at least 400px */
 @media (min-width: 400px) {
     .carousel__button--left {
         left: -4rem;
@@ -352,18 +387,21 @@ footer {
     }
 }
 
+/* At viewport widths of at least 450px */
 @media (min-width: 450px) {
     .wrapper {
         max-width: 400px;
     }
 }
 
+/* At viewport widths of at least 500px */
 @media (min-width: 500px) {
     .wrapper {
         max-width: 450px;
     }
 }
 
+/* At viewport widths of at least 600px */
 @media (min-width: 600px) {
     .wrapper {
         max-width: 540px;
@@ -384,10 +422,9 @@ footer {
         height: 25em;
         width: 30em;
     }
-    
-    
 }
 
+/* At viewport widths of at least 700px */
 @media (min-width: 700px) {
     .wrapper {
         max-width: 630px;
@@ -411,6 +448,7 @@ footer {
     }
 }
 
+/* At viewport widths of at least 800px */
 @media (min-width: 800px) {
     .wrapper {
         max-width: 720px;
@@ -421,6 +459,7 @@ footer {
     }
 }
 
+/* At viewport widths of at least 900px */
 @media (min-width: 900px) {
     .wrapper {
         max-width: 810px;
@@ -430,6 +469,15 @@ footer {
         gap: 4rem;
     }
 }
+
+/* 
+    From Here this applies to the Tablet version of the Website. 
+    The wrappers will keep increasing in width. 
+    Double column layouts will become double column layouts with display flex. 
+    The font sizes will increase according to the design.
+    The footer will shift from mobile display to the full length.
+*/
+
 
 @media (min-width: 1024px) {
     .wrapper {
@@ -608,6 +656,11 @@ footer {
     }
 }
 
+/* 
+    This section involves adjusting wrapper widths and padding to gradually ease up to laptop dimensions
+*/
+
+/* At viewport widths of 1150px at least. */
 @media (min-width: 1150px) {
     .wrapper {
         max-width: 1012px;
@@ -625,6 +678,11 @@ footer {
         width: 59%;
     }
 }
+
+/* 
+    At viewport widths of 1220px at least. 
+    Here I changed from the Mobile Header to the Full Size footer
+*/
 
 @media (min-width: 1220px) {
     .hamburger {
@@ -669,6 +727,8 @@ footer {
     }
 }
 
+
+/* At viewport widths of 1300px at least. */
 @media (min-width: 1300px) {
     .wrapper {
         max-width: 1114px;
@@ -686,6 +746,13 @@ footer {
         padding: 0 4.5rem;
     }
 }
+
+/* 
+    From Here this applies to the Laptop version of the Website. 
+    The wrappers will keep increasing in width. 
+    Padding will increase
+    The font sizes will increase according to the design.
+*/
 
 @media (min-width: 1440px) {
     .wrapper {
@@ -743,6 +810,12 @@ footer {
     }
 }
 
+/* 
+    This section focuses on the tranistion between 1440px and 1920 px
+    Wrapper sizes will gradually increase. 
+*/
+
+/* At viewport widths of 1540px at least. */
 @media (min-width: 1540px) {
     .wrapper {
         max-width: 1278px;
@@ -753,17 +826,25 @@ footer {
     }
 }
 
+/* At viewport widths of 1630px at least. */
 @media (min-width: 1630px) {
     .wrapper {
         max-width: 1315px;
     }
 }
 
+/* At viewport widths of 1740px at least. */
 @media (min-width: 1740px) {
     .wrapper {
         max-width: 1426px;
     }
 }
+
+
+/* 
+    This is the final display dimensions. 
+    The wrapper and font sizes as well as padding have been increased.
+*/
 
 @media (min-width: 1920px) {
     .wrapper {
@@ -849,4 +930,3 @@ footer {
         font-size: 1.8rem;
     }
 }
-
