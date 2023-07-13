@@ -1,7 +1,12 @@
+/* 
+    This file was created to create the micro interactions on the navigation bar items on all pages at once
+*/
+
 .nav__item {
     position: relative;
 }
 
+/* Create a line under the nav item with the active class*/
 .nav__item.active:before {
     position: absolute;
     content: "";
@@ -11,6 +16,7 @@
     bottom: -6px;
 }
 
+/* Create a line under the other nav items */
 .nav__item::before {
     position: absolute;
     content: "";
@@ -21,6 +27,12 @@
     transition: width .3s;
 }
 
+/* When you hover over it increase the width from 0 to 35% */
 .nav__item:hover::before {
     width: 35%;
+}
+
+/* Keep the nav bar over the other elements with a z-index */
+.nav__bar {
+    z-index: 100;
 }
