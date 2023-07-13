@@ -12,13 +12,17 @@
         <link rel="stylesheet" href="css/microinteractions.css" />
     </head>
     <body>
+        <!-- Background Colour that Spreads across the header and the hero -->
         <div class="background">
+
+            <!-- Header -->
             <header class="nav__bar">
                 <div class="wrapper nav__bar-wrapper">
                     <a href="index.html" class="logo">
                         <img src="Images/logo.svg" alt="logo" />
                     </a>
 
+                    <!-- Nav Menu -->
                     <ul class="nav__menu">
                         <li>
                             <a class="nav__item" href="index.html"
@@ -54,6 +58,7 @@
                         </li>
                     </ul>
 
+                    <!-- Hamburger Menu -->
                     <div class="hamburger">
                         <img
                             src="Images/menu.svg"
@@ -64,6 +69,7 @@
                 </div>
             </header>
 
+            <!-- Hero Section -->
             <main class="hero">
                 <div class="wrapper">
                     <h1>Quantum Protocols</h1>
@@ -93,6 +99,7 @@
             </main>
         </div>
 
+        <!-- Refreshers on Quantum Basics -->
         <div class="wrapper">
             <section class="refreshers">
                 <h3>Refreshers</h3>
@@ -131,9 +138,12 @@
 
         <div class="border"></div>
 
+        <!-- Section About Quantum Key Distribution -->
         <div class="wrapper">
             <section class="qkd">
                 <h3>Quantum Key Distribution</h3>
+
+                <!-- Introducing Scenario -->
                 <div class="stage1">
                     <div class="content">
                         <p>
@@ -163,6 +173,7 @@
                     </div>
                 </div>
 
+                <!-- If you don't have an eavesdropper -->
                 <div class="without">
                     <p class="bold">Without Eavesdropper</p>
                     <p>
@@ -192,6 +203,7 @@
                     </p>
                 </div>
 
+                <!-- If there's an eavesdropper -->
                 <div class="with">
                     <p class="bold">With Eavesdropper</p>
                     <p>
@@ -244,10 +256,13 @@
 
         <div class="border"></div>
 
+        <!-- Section about other quantum protocols -->
         <div class="wrapper">
             <section class="other">
                 <h3>Other Quantum Protocol</h3>
                 <div class="center">
+
+                    <!-- Quantum Teleportation -->
                     <div class="quantum_teleportation">
                         <div class="content">
                             <p class="bold">Quantum Teleportation</p>
@@ -283,7 +298,10 @@
                         </div>
                     </div>
 
+                    <!-- Other lesser known protocols -->
                     <div class="others">
+
+                        <!-- Superdense Coding -->
                         <div class="superdense_coding">
                             <p class="bold">Superdense Coding</p>
                             <p>
@@ -295,6 +313,7 @@
                             </p>
                         </div>
 
+                        <!-- Quantum Error Correction -->
                         <div class="qec">
                             <p class="bold">Quantum Error Correction</p>
                             <p>
@@ -308,6 +327,7 @@
             </section>
         </div>
 
+        <!-- Footer for Mobile -->
         <footer class="footer-mobile">
             <div class="border"></div>
             <div class="footer_logo">
@@ -326,6 +346,7 @@
             </div>
         </footer>
 
+        <!-- Desktop Footer -->
         <footer class="footer-desktop">
             <div class="border"></div>
             <div class="wrapper-footer">
@@ -340,7 +361,7 @@
                             <li>
                                 <a class="active" href="index.html">Home</a>
                             </li>
-                            <li><a href="index.html">Basics</a></li>
+                            <li><a href="index.html#quantum_basics">Basics</a></li>
                             <li>
                                 <a href="quantum-circuits.html">Circuits</a>
                             </li>
@@ -355,6 +376,7 @@
                     </nav>
                 </div>
 
+                <!-- How visitors can interact with the site -->
                 <div class="interaction">
                     <div class="social_headers">
                         <a href="#"
@@ -368,6 +390,7 @@
                         /></a>
                     </div>
 
+                    <!-- How to join the Quantum newsletter -->
                     <div class="newsletter">
                         <p>Join the Community</p>
                         <input type="email" placeholder="Enter your email" />
@@ -380,6 +403,8 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Javascript Files -->
         <script src="js/menu.js"></script>
         <script src="js/scrolldown.js"></script>
     </body>
