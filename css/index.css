@@ -9,7 +9,7 @@ body {
     font-family: 'Raleway'; /* Set the font family for the body */
 }
 
-/* Removes padding */
+/* Removes padding and margin */
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     box-sizing: border-box;
 }
 
-
+/* Removes all the defaults decorations on a tags */
 a {
     text-decoration: none;
     color: black;
@@ -79,6 +79,7 @@ a {
 }
 
 .nav__menu {
+    /* Set the position of the header to fixed */
     position: fixed;
     display: flex;
     flex-direction: column;
