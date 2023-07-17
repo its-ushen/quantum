@@ -1,17 +1,21 @@
+/* Global Styles */
+
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+    font-size: 62.5%; /* Set base font size to 10px */
+    box-sizing: border-box; /* Use border-box box model */
 }
 
 body {
-    font-family: 'Raleway';
+    font-family: 'Raleway'; /* Set the font family for the body */
 }
 
+/* Removes padding */
 *{
     margin: 0;
     padding: 0;
 }
 
+/* Put the images to have a max-width of 100% so that they don't exceed the wrapper */
 img {
     max-width: 100%;
 }
@@ -21,6 +25,7 @@ a {
     color: black;
 }
 
+/* Set a wrapper */
 .wrapper,
 .wrapper-pauli_contents {
     max-width: 350px;
@@ -32,7 +37,9 @@ a {
 background-color: #FFF9F1;
 }
 
- 
+/* 
+    Header Styles
+*/
 .nav__menu {
     list-style: none;
 }
@@ -53,7 +60,7 @@ background-color: #FFF9F1;
     transition: all .6s ease-in-out;
 }
 
-
+/* Header when it scrolls down */
 .nav__bar.scroll-down {
     filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
     position: fixed;
@@ -94,6 +101,8 @@ background-color: #FFF9F1;
     background-color: white;
 }
 
+/* Hero section styles */
+
 .hero {
     position: relative;
     margin-bottom: 5rem;
@@ -102,8 +111,7 @@ background-color: #FFF9F1;
     z-index: 1;
 }
 
-
-
+/* Hero section when scrolling */
 .hero.scroll-down {
     padding-top: 12.2rem;
 }
@@ -137,9 +145,12 @@ h4 {
     z-index: -1;
 }
 
+/* Define a border */
 .border {
     border-bottom: 1px solid black;
 }
+
+/* Styles for paragraph */
 
 p {
     font-size: 1.6rem;
@@ -155,6 +166,8 @@ p {
 .quantum_basics p{
     padding-bottom: 4rem;
 }
+
+/* Styles for Each Heading */
 
 h3 {
     font-size: 2.8rem;
@@ -182,6 +195,9 @@ h5 {
     display: none;
 }
 
+/* Need to know styles */
+
+/* Puts the Need to know into a flex display with column orientation */
 .need_to_know .col-right {
     display: flex;
     flex-direction: column;
@@ -205,6 +221,9 @@ section {
 h3 {
     padding-top: 5rem;
 }
+
+
+/* Quantum Gates Styles */
 
 .quantum_gates p {
     padding-bottom: 2.3rem;
@@ -231,6 +250,8 @@ h3 {
     width: 30.4rem;
 }
 
+/* Styles for link to next webpage */
+
 .next {
     font-size: 1.6rem;
     font-weight: 500;
@@ -239,6 +260,8 @@ h3 {
     margin-bottom: 2.1rem;
 }
 
+
+/* Styles for footer */
 footer {
     background-color: #FFF9F1;
     width: 100%;
@@ -265,6 +288,18 @@ footer {
 }
 
 
+/* Media Queries */
+
+/* 
+    Each media query targets a specific viewport width, and the CSS rules inside 
+    each media query will only apply when the viewport is at least that wide.
+*/
+
+/* 
+    The media queries are for the mobile layout first. It's mainly adjusting the wrapper sizes
+*/
+
+/* At viewport widths of at least 450px */
 @media (min-width: 450px) {
     .wrapper,
     .wrapper-pauli_contents {
@@ -272,6 +307,7 @@ footer {
     }
 }
 
+/* At viewport widths of at least 500px */
 @media (min-width: 500px) {
     .wrapper,
     .wrapper-pauli_contents {
@@ -279,6 +315,7 @@ footer {
     }
 }
 
+/* At viewport widths of at least 600px */
 @media (min-width: 600px) {
     .wrapper.nav__bar-wrapper {
         max-width: 540px;
@@ -289,6 +326,7 @@ footer {
     }
 }
 
+/* At viewport widths of at least 700px */
 @media (min-width: 700px) {
     .wrapper.nav__bar-wrapper {
         max-width: 630px;
@@ -315,6 +353,7 @@ footer {
         width: 40rem;
     }
 
+    /* displaying the circuit using display frid to create a 2 by 2 layout */
     .Pauli .col-right {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -349,6 +388,7 @@ footer {
     }
 }
 
+/* At viewport widths of at least 800px */
 @media (min-width: 800px) {
     .wrapper,
     .wrapper-pauli_contents,
@@ -374,6 +414,7 @@ footer {
     }
 }
 
+/* At viewport widths of at least 900px */
 @media (min-width: 900px) {
     .wrapper {
         max-width: 540px;
@@ -411,6 +452,14 @@ footer {
         padding: 0;
     }
 }
+
+/* 
+    From Here this applies to the Tablet version of the Website. 
+    The wrappers will keep increasing in width. 
+    Double column layouts will become double column layouts with display flex. 
+    The font sizes will increase according to the design.
+    The footer will shift from mobile display to the full length.
+*/
 
 @media (min-width: 1024px) {
     .wrapper {
@@ -518,6 +567,17 @@ footer {
     }
 }
 
+
+/* 
+    This section involves adjusting wrapper widths and padding to gradually ease up to laptop dimensions
+*/
+
+/* 
+    At viewport widths of 1220px at least. 
+    Here I changed from the Mobile Header to the Full Size footer
+    Alligned all the text to the left
+    Continued changing from flex direction column to flex direction row
+*/
 @media (min-width: 1220px) {
     .hamburger {
         display: none;
@@ -654,6 +714,7 @@ footer {
     }
 }
 
+/* At viewport widths of 1300px at least. */
 @media (min-width: 1300px) {
     .wrapper,
     .wrapper.nav__bar-wrapper,
@@ -663,6 +724,12 @@ footer {
     }
 }
 
+/* 
+    From Here this applies to the Laptop version of the Website. 
+    The wrappers will keep increasing in width. 
+    Padding will increase
+    The font sizes will increase according to the design.
+*/
 @media (min-width: 1440px) {
     .wrapper,
     .wrapper.nav__bar-wrapper,
@@ -701,6 +768,12 @@ footer {
     }
 }
 
+/* 
+    This section focuses on the tranistion between 1440px and 1920 px
+    Wrapper sizes will gradually increase. 
+*/
+
+/* At viewport widths of 1540px at least. */
 @media (min-width: 1540px) {
     .wrapper,
     .wrapper.nav__bar-wrapper,
@@ -722,6 +795,7 @@ footer {
     }
 }
 
+/* At viewport widths of 1630px at least. */
 @media (min-width: 1630px) {
     .wrapper,
     .wrapper.nav__bar-wrapper,
@@ -748,6 +822,7 @@ footer {
     }
 }
 
+/* At viewport widths of 1740px at least */
 @media (min-width: 1740px) {
     .wrapper,
     .wrapper.nav__bar-wrapper,
@@ -789,6 +864,10 @@ footer {
     }
 }
 
+/* 
+    This is the final display dimensions. 
+    The wrapper and font sizes as well as padding have been increased.
+*/
 @media (min-width: 1920px) {
     .wrapper,
     .wrapper.nav__bar-wrapper,
